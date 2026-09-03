@@ -7,7 +7,7 @@ Obrazac koristi Netlify Forms (`data-netlify="true"`). Nakon deploya:
 1. Otvoriti Netlify projekt.
 2. Otvoriti Forms / Forms notifications.
 3. Dodati email notification za obrazac `kontakt`.
-4. Kao primatelja postaviti `proinmont1@gmail.com`.
+4. Kao primatelja postaviti `aljosalukic123@gmail.com`.
 
 Netlify će tada zaprimati obrasce i slati obavijesti na navedenu adresu.
 
