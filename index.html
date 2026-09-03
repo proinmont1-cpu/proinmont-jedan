@@ -25,8 +25,8 @@
     .topbar{background:#0e0f10;color:#ddd;font-size:.88rem}
     .topbar .container{display:flex;justify-content:space-between;gap:20px;padding:8px 0}
     header{position:sticky;top:0;z-index:50;background:rgba(21,23,25,.96);backdrop-filter:blur(10px);border-bottom:1px solid rgba(255,255,255,.08)}
-    .nav{height:78px;display:flex;align-items:center;justify-content:space-between}
-    .brand{display:flex;align-items:center;height:64px;max-width:205px;overflow:hidden}.brand img{display:block;width:195px;height:54px;object-fit:contain;object-position:left center;filter:none}
+    .nav{height:78px;display:flex;align-items:center;justify-content:space-between;min-width:0}
+    .brand{display:flex;align-items:center;width:210px;height:62px;flex:0 0 210px;overflow:hidden}.brand img{display:block;width:210px;height:58px;max-width:210px;object-fit:contain;object-position:left center;filter:none}
     nav{display:flex;gap:26px;align-items:center}
     nav a{color:#f4f4f4;font-size:.94rem;font-weight:650}
     nav a:hover{color:var(--gold2)}
@@ -90,7 +90,7 @@
     .brand-logos{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
     .brand-logo{min-height:125px;background:#fff;border:1px solid #dedfdd;display:flex;align-items:center;justify-content:center;padding:22px;overflow:hidden}
     .brand-logo img{display:block;max-width:100%;max-height:72px;width:auto;height:auto;object-fit:contain}
-    .brand-logo img.logo-knauf{max-height:82px}
+    .brand-logo img.logo-knauf{max-height:82px}.brand-logo img.logo-wurth{width:190px;max-width:190px;max-height:72px}
     .brands-note{margin-top:18px;color:var(--muted);font-size:.9rem}
 
     
@@ -150,7 +150,7 @@
     }
     @media(max-width:600px){
       .container{width:min(var(--max),calc(100% - 28px))}.topbar .container{font-size:.78rem}.topbar .container span:last-child{display:none}
-      .brand{height:58px;max-width:175px}.brand img{width:168px;height:48px}.hero-content{padding:80px 0 120px}.hero p{font-size:1rem}
+      .brand{width:185px;height:52px;flex-basis:185px}.brand img{width:185px;height:51px;max-width:185px}.hero-content{padding:80px 0 120px}.hero p{font-size:1rem}
       .section{padding:65px 0}.services,.steps,.process,.stat-row,.brand-logos{grid-template-columns:1fr}
       .gallery figure:nth-child(n){grid-column:span 12}.gallery img{min-height:260px}
       form{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}
@@ -176,7 +176,7 @@
 
   <header>
     <div class="container nav" id="nav">
-      <a class="brand" href="/"><img src="assets/logo-header.svg" alt="Pro in mont jedan j.d.o.o. – građevinski radovi Zagreb"></a>
+      <a class="brand" href="./" aria-label="Pro in mont jedan j.d.o.o. – građevinski radovi Zagreb"><img src="assets/logo-header.png" alt="Pro in mont jedan j.d.o.o. – građevinski radovi Zagreb" width="585" height="160"></a>
       <button class="menu" aria-label="Otvori izbornik" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
       <nav>
         <a href="#usluge">Usluge</a>
@@ -269,7 +269,7 @@
         </div>
         <div class="brand-logos" aria-label="Dobavljači i proizvođači">
           <div class="brand-logo"><img src="assets/brands/ceresit.svg" alt="Ceresit" loading="lazy"></div>
-          <div class="brand-logo"><img src="assets/brands/wurth.png" alt="Würth" loading="lazy"></div>
+          <div class="brand-logo"><img class="logo-wurth" src="assets/brands/wurth.png" alt="Würth" width="1000" height="215"></div>
           <div class="brand-logo"><img src="assets/brands/knauf.svg" alt="Knauf" loading="lazy"></div>
           <div class="brand-logo"><img src="assets/brands/tondach.svg" alt="Tondach" loading="lazy"></div>
         </div>
@@ -321,8 +321,9 @@
         </div>
 
         <div>
-          <form name="kontakt" method="POST" data-netlify="true" data-netlify-honeypot="bot-field" action="hvala.html">
+          <form name="kontakt" method="POST" data-netlify="true" netlify data-netlify-honeypot="bot-field" action="/">
             <input type="hidden" name="form-name" value="kontakt">
+            <input type="hidden" name="subject" data-remove-prefix value="Novi upit s web stranice – Pro in mont">
             <p class="hp"><label>Ne ispunjavajte: <input name="bot-field"></label></p>
             <div class="field"><label for="ime">Ime i prezime *</label><input id="ime" name="ime" required autocomplete="name"></div>
             <div class="field"><label for="email">E-mail *</label><input id="email" type="email" name="email" required autocomplete="email"></div>
@@ -403,6 +404,31 @@
     modal.addEventListener('click',e=>{if(e.target===modal) closeService()});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal.classList.contains('open')) closeService()});
     document.getElementById('modalCta').addEventListener('click',()=>closeService());
+
+    const contactForm=document.querySelector('form[name="kontakt"]');
+    if(contactForm){
+      contactForm.addEventListener('submit',async e=>{
+        e.preventDefault();
+        const submit=contactForm.querySelector('button[type="submit"]');
+        const original=submit.textContent;
+        submit.disabled=true;
+        submit.textContent='Šaljem…';
+        try{
+          const body=new URLSearchParams(new FormData(contactForm)).toString();
+          const response=await fetch('/',{
+            method:'POST',
+            headers:{'Content-Type':'application/x-www-form-urlencoded'},
+            body
+          });
+          if(!response.ok) throw new Error('HTTP '+response.status);
+          window.location.href='hvala.html';
+        }catch(error){
+          submit.disabled=false;
+          submit.textContent=original;
+          alert('Došlo je do pogreške pri slanju upita. Molimo pokušajte ponovno ili nas kontaktirajte telefonom.');
+        }
+      });
+    }
 
     function cookieChoice(value){localStorage.setItem('cookieChoice',value);document.getElementById('cookie').classList.remove('show')}
     if(!localStorage.getItem('cookieChoice')) document.getElementById('cookie').classList.add('show');
