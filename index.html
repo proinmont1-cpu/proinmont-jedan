@@ -6,11 +6,11 @@
   <title>Građevinski radovi Zagreb | Pro in mont jedan j.d.o.o.</title>
   <meta name="description" content="Pro in mont jedan j.d.o.o. izvodi građevinske radove u Zagrebu i okolici – iskopi, temelji, roh-bau, krovovi, hidroizolacija i unutarnji građevinski radovi. Zatražite ponudu.">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://proinmont-jedan.online/">
+  <link rel="canonical" href="https://proinmont-jedan.com.hr/">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Pro in mont jedan j.d.o.o. | Građevinski radovi Zagreb">
   <meta property="og:description" content="Od iskopa do gotovog doma – građevinski radovi za stambene objekte u Zagrebu i okolici.">
-  <meta property="og:image" content="https://proinmont-jedan.online/assets/logo.png">
+  <meta property="og:image" content="https://proinmont-jedan.com.hr/assets/logo.png">
   <meta name="theme-color" content="#151719">
   <link rel="icon" href="assets/logo.png">
 
@@ -100,6 +100,39 @@
     .brand-logo img{max-width:180px;max-height:76px}
     .brand-logo{min-height:130px}
 
+    .project-intro{display:grid;grid-template-columns:1.05fr .95fr;gap:46px;align-items:stretch;margin-bottom:34px}
+    .project-copy{background:var(--dark);color:#fff;padding:42px}
+    .project-copy h3{font-size:clamp(1.7rem,3vw,2.5rem);line-height:1.12;margin:0 0 15px}
+    .project-copy p{color:#d1d2d3;margin:0 0 18px}
+    .project-tags{display:flex;flex-wrap:wrap;gap:9px;margin-top:22px}
+    .project-tag{border:1px solid rgba(255,255,255,.18);padding:7px 10px;font-size:.76rem;text-transform:uppercase;letter-spacing:.06em;color:#eee}
+    .project-cover{min-height:100%;margin:0;overflow:hidden;background:#ddd}
+    .project-cover img{width:100%;height:100%;min-height:360px;object-fit:cover}
+    .project-gallery{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+    .project-gallery figure{margin:0;position:relative;overflow:hidden;background:#ddd;cursor:zoom-in;min-height:230px}
+    .project-gallery figure:nth-child(1){grid-column:span 7;grid-row:span 2}
+    .project-gallery figure:nth-child(2),.project-gallery figure:nth-child(3){grid-column:span 5}
+    .project-gallery figure:nth-child(n+4){grid-column:span 4}
+    .project-gallery img{width:100%;height:100%;min-height:230px;object-fit:cover;transition:transform .5s}
+    .project-gallery figure:hover img{transform:scale(1.04)}
+    .project-gallery .caption{padding:55px 18px 16px}
+    .partners{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+    .partner-card{border:1px solid #dedfdd;background:#fff;padding:28px;min-height:220px;display:flex;flex-direction:column;transition:.2s}
+    .partner-card:hover{transform:translateY(-3px);box-shadow:0 12px 30px rgba(0,0,0,.07);border-color:#c9a348}
+    .partner-kicker{font-size:.72rem;color:var(--gold);font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+    .partner-card h3{margin:10px 0 9px;font-size:1.2rem;line-height:1.2}
+    .partner-card p{margin:0;color:var(--muted);font-size:.94rem}
+    .partner-link{margin-top:auto;padding-top:18px;color:var(--gold);font-weight:800;font-size:.82rem}
+    .partner-link:hover{text-decoration:underline}
+    .lightbox{position:fixed;inset:0;background:rgba(8,9,10,.92);display:none;align-items:center;justify-content:center;padding:24px;z-index:1000}
+    .lightbox.open{display:flex}
+    .lightbox img{max-width:min(1200px,94vw);max-height:88vh;object-fit:contain;box-shadow:0 20px 70px rgba(0,0,0,.45)}
+    .lightbox-close{position:absolute;top:18px;right:22px;border:0;background:none;color:#fff;font-size:38px;line-height:1;cursor:pointer}
+    .lightbox-caption{position:absolute;left:24px;right:24px;bottom:18px;text-align:center;color:#fff;font-weight:700;font-size:.95rem}
+    .powered-by{font-weight:700;display:flex;align-items:center;justify-content:flex-end;gap:10px;color:#888;font-size:.78rem}
+    .powered-by a{display:inline-flex;align-items:center}
+    .powered-by img{width:150px;height:auto;max-height:48px;object-fit:contain}
+
     .contact-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px}
     .contact-info{background:var(--dark);color:#fff;padding:42px}
     .contact-info h2{font-size:2.5rem;line-height:1.1;margin:0 0 18px}
@@ -122,29 +155,30 @@
     .footer-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:35px}
     footer h3{color:#fff;margin-top:0}
     footer a:hover{color:var(--gold2)}
-    .footer-bottom{border-top:1px solid #303234;margin-top:40px;padding-top:18px;display:flex;justify-content:space-between;gap:20px;font-size:.82rem}
+    .footer-bottom{border-top:1px solid #303234;margin-top:40px;padding-top:18px;display:grid;grid-template-columns:1fr 1fr auto;align-items:center;gap:20px;font-size:.82rem}
     .legal{max-width:850px}
     .legal h1{color:var(--dark);font-size:3rem}
     .legal h2{margin-top:40px}
     .legal p,.legal li{color:#555}
     @media(max-width:900px){
       nav{display:none}.menu{display:block}.nav.open nav{display:flex;position:absolute;top:78px;left:0;right:0;background:#151719;flex-direction:column;padding:20px;align-items:stretch}
-      .hero{min-height:650px}.intro-grid,.contact-grid{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.brand-logos{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}
+      .hero{min-height:650px}.intro-grid,.contact-grid,.project-intro{grid-template-columns:1fr}.services{grid-template-columns:1fr 1fr}.steps{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.brand-logos{grid-template-columns:1fr 1fr}.partners{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}
+      .project-cover img{min-height:300px}.project-gallery figure:nth-child(n){grid-column:span 6;grid-row:auto}
       .gallery figure:nth-child(n){grid-column:span 6;grid-row:auto}
     }
     @media(max-width:600px){
       .container{width:min(var(--max),calc(100% - 28px))}.topbar .container{font-size:.78rem}.topbar .container span:last-child{display:none}
       .brand{width:185px;height:52px;flex-basis:185px}.brand img{width:185px;height:51px;max-width:185px}.hero-content{padding:80px 0 120px}.hero p{font-size:1rem}
-      .section{padding:65px 0}.services,.steps,.process,.stat-row,.brand-logos{grid-template-columns:1fr}
+      .section{padding:65px 0}.services,.steps,.process,.stat-row,.brand-logos,.partners{grid-template-columns:1fr}
       .gallery figure:nth-child(n){grid-column:span 12}.gallery img{min-height:260px}
       form{grid-template-columns:1fr}.field.full{grid-column:auto}.footer-grid{grid-template-columns:1fr}.footer-bottom{flex-direction:column}
-      .contact-info{padding:28px}
+      .contact-info{padding:28px}.footer-bottom{grid-template-columns:1fr}
     }
   </style>
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","name":"Pro in mont jedan j.d.o.o.","url":"https://proinmont-jedan.online/","telephone":"+385917988999","taxID":"39841128735","identifier":{"@type":"PropertyValue","propertyID":"MBS","value":"081424551"},"address":{"@type":"PostalAddress","streetAddress":"Ulica Ivana Keleka 2","postalCode":"10360","addressLocality":"Sesvete","addressRegion":"Zagreb","addressCountry":"HR"},"areaServed":{"@type":"City","name":"Zagreb"},"description":"Građevinski radovi na stambenim objektima: iskopi, temelji, roh-bau, krovovi, hidroizolacija i unutarnji građevinski radovi.","contactPoint":{"@type":"ContactPoint","contactType":"consumer complaints","email":"proinmont1@gmail.com","telephone":"+385917988999","availableLanguage":"hr"}}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"GeneralContractor","name":"Pro in mont jedan j.d.o.o.","url":"https://proinmont-jedan.com.hr/","telephone":"+385917988999","taxID":"39841128735","identifier":{"@type":"PropertyValue","propertyID":"MBS","value":"081424551"},"address":{"@type":"PostalAddress","streetAddress":"Ulica Ivana Keleka 2","postalCode":"10360","addressLocality":"Sesvete","addressRegion":"Zagreb","addressCountry":"HR"},"areaServed":{"@type":"City","name":"Zagreb"},"description":"Građevinski radovi na stambenim objektima: iskopi, temelji, roh-bau, krovovi, hidroizolacija i unutarnji građevinski radovi.","contactPoint":{"@type":"ContactPoint","contactType":"consumer complaints","email":"proinmont1@gmail.com","telephone":"+385917988999","availableLanguage":"hr"}}</script>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Radite li pojedinačne faze gradnje?","acceptedAnswer":{"@type":"Answer","text":"Da. Ovisno o projektu moguće je ugovoriti pojedinačnu fazu ili širi opseg građevinskih radova."}},{"@type":"Question","name":"Radite li u Zagrebu i okolici?","acceptedAnswer":{"@type":"Answer","text":"Da. Primarno područje rada su Zagreb i okolica, a dostupnost se procjenjuje prema lokaciji i projektu."}},{"@type":"Question","name":"Kako zatražiti ponudu?","acceptedAnswer":{"@type":"Answer","text":"Pošaljite lokaciju objekta, vrstu radova i osnovne informacije putem obrasca, telefona ili WhatsAppa."}}]}</script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://proinmont-jedan.online/"}]}</script></head>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Početna","item":"https://proinmont-jedan.com.hr/"}]}</script></head>
 <body>
   <div class="topbar"><div class="container"><span>Građevinski radovi • Zagreb i okolica</span><span>+385 91 7988 999</span></div></div>
 
@@ -155,7 +189,8 @@
       <nav>
         <a href="#usluge">Usluge</a>
         <a href="#proces">Kako radimo</a>
-        <a href="#projekti">Projekti</a>
+        <a href="projekti.html">Naši projekti</a>
+        <a href="#partneri">Partneri</a>
         <a href="#o-nama">O nama</a>
         <a href="#faq">FAQ</a>
         <a href="#kontakt" class="nav-cta">Zatražite ponudu</a>
@@ -228,6 +263,7 @@
           <article class="service"><a href="usluge/vodovodne-instalacije.html"><div class="num">06 / VODA</div><h3>Vodovodne instalacije</h3><p>Izvedba i priprema vodovodnih instalacija u stambenim objektima.</p><span style="display:block;margin-top:20px;color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.04em">Otvori detalje →</span></a></article>
           <article class="service"><a href="usluge/elektroinstalacije.html"><div class="num">07 / ELEKTRO</div><h3>Električne instalacije</h3><p>Priprema i izvedba građevinskog dijela elektroinstalacija prema projektu.</p><span style="display:block;margin-top:20px;color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.04em">Otvori detalje →</span></a></article>
           <article class="service"><a href="usluge/grijanje.html"><div class="num">08 / GRIJANJE</div><h3>Centralno i podno grijanje</h3><p>Građevinski i instalaterski radovi povezani sa sustavima grijanja, uključujući pripremu za podno grijanje.</p><span style="display:block;margin-top:20px;color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.04em">Otvori detalje →</span></a></article>
+          <article class="service"><a href="usluge/dizalice-topline.html"><div class="num">09 / DIZALICE TOPLINE</div><h3>Dizalice topline i podno grijanje</h3><p>Planiranje, priprema i izvedba niskotemperaturnih sustava grijanja te koordinacija instalacija za nove objekte i rekonstrukcije.</p><span style="display:block;margin-top:20px;color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.04em">Otvori detalje →</span></a></article>
           <article class="service"><a href="usluge/hladenje.html"><div class="num">09 / HLAĐENJE</div><h3>Sustavi hlađenja i klimatizacija</h3><p>Priprema i izvedba instalacijskog dijela potrebnog za sustave hlađenja i klimatizaciju.</p><span style="display:block;margin-top:20px;color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.04em">Otvori detalje →</span></a></article>
           <article class="service"><a href="usluge/suhomontaza.html"><div class="num">10 / SUHOMONTAŽA</div><h3>Rigips i suhomontažni sustavi</h3><p>Pregradni zidovi, obloge i spušteni stropovi za stambene prostore.</p><span style="display:block;margin-top:20px;color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.04em">Otvori detalje →</span></a></article>
           <article class="service"><a href="usluge/zavrsni-radovi.html"><div class="num">11 / ZAVRŠNI</div><h3>Završni građevinski radovi</h3><p>Završne građevinske faze kojima se prostor priprema za finalno uređenje i korištenje.</p><span style="display:block;margin-top:20px;color:var(--gold);font-size:.78rem;font-weight:800;letter-spacing:.04em">Otvori detalje →</span></a></article>
@@ -251,20 +287,78 @@
       </div>
     </section>
 
-    <section class="section" id="projekti">
+    <section class="section section-dark" id="projekti">
       <div class="container">
         <div class="section-head">
-          <div class="eyebrow">Projekti i radovi</div>
-          <h2>Stvarni radovi govore više od riječi.</h2>
-          <p>Galeriju ćemo postupno proširivati stvarnim fotografijama izvedenih i aktualnih projekata.</p>
+          <div class="eyebrow">Istaknuti projekt</div>
+          <h2>Stambeni objekt – izvedba i koordinacija građevinskih radova.</h2>
+          <p>Predstavljamo jedan od projekata na kojem su objedinjene različite faze gradnje i specijalizirani radovi. Fotografije prikazuju stvarno stanje objekta tijekom izvedbe, od roh-bau faze i vanjske stolarije do pripreme instalacija i zaštite konstrukcije.</p>
         </div>
-        <div class="gallery">
-          <figure><img src="assets/gradiliste-01.jpg" alt="Stambeno gradilište i građevinski radovi" loading="lazy"><figcaption class="caption">Gradilište i konstrukcijski radovi</figcaption></figure>
-          <figure><img src="assets/gradiliste-01.jpg" alt="Izvedba temeljne ploče i armiranobetonskih radova" loading="lazy"><figcaption class="caption">Temelji i AB radovi</figcaption></figure>
-          <figure><img src="assets/armatura-01.jpg" alt="Armatura temeljne ploče" loading="lazy"><figcaption class="caption">Armatura</figcaption></figure>
-          <figure><img src="assets/hidroizolacija-01.jpg" alt="Izvedba hidroizolacije na građevinskom objektu" loading="lazy"><figcaption class="caption">Hidroizolacija</figcaption></figure>
-          <figure><img src="assets/gradiliste-01.jpg" alt="Građevinski radovi na stambenom objektu" loading="lazy"><figcaption class="caption">Izgradnja objekta</figcaption></figure>
-          <figure><img src="assets/armatura-01.jpg" alt="Armiranobetonski radovi prema projektu" loading="lazy"><figcaption class="caption">Izvedba prema projektu</figcaption></figure>
+
+        <div class="project-intro">
+          <div class="project-copy">
+            <div class="partner-kicker">Projekt / stambena gradnja</div>
+            <h3>Od nosive konstrukcije do pripreme objekta za završne faze.</h3>
+            <p>Na projektu je izveden niz građevinskih faza koje zahtijevaju dobru koordinaciju različitih struka. Poseban naglasak je na preciznoj izvedbi zidanja i armiranobetonskih elemenata, zaštiti objekta od vlage, ugradnji vanjske stolarije te pravodobnoj pripremi elektro i drugih instalacijskih trasa.</p>
+            <p>Pro in mont jedan j.d.o.o. organizira i koordinira izvođenje radova prema potrebama projekta, uz uključivanje specijaliziranih partnera za pojedine instalaterske i stručne faze.</p>
+            <div class="project-tags">
+              <span class="project-tag">Roh-bau</span>
+              <span class="project-tag">AB konstrukcija</span>
+              <span class="project-tag">Hidroizolacija</span>
+              <span class="project-tag">Stolarija</span>
+              <span class="project-tag">Elektro instalacije</span>
+              <span class="project-tag">Koordinacija radova</span>
+            </div>
+          </div>
+          <figure class="project-cover"><img src="assets/projekt-stambeni-naslovna.png" alt="Stambeni objekt u izgradnji – prezentacijski prikaz projekta" loading="lazy"></figure>
+        </div>
+
+        <div class="project-gallery" aria-label="Galerija projekta stambenog objekta">
+          <figure data-lightbox data-caption="Roh-bau i nosiva konstrukcija – izvedba zidanja i armiranobetonskih elemenata."><img src="assets/projekt-stambeni-01.jpg" alt="Roh-bau stambenog objekta i armiranobetonska konstrukcija" loading="lazy"><figcaption class="caption">Roh-bau i nosiva konstrukcija</figcaption></figure>
+          <figure data-lightbox data-caption="Priprema i izvedba instalacijskih trasa na vanjskim zidovima objekta."><img src="assets/projekt-stambeni-02.jpg" alt="Instalacijske trase na stambenom objektu tijekom gradnje" loading="lazy"><figcaption class="caption">Instalacijske trase i priprema</figcaption></figure>
+          <figure data-lightbox data-caption="Detalj objekta s izvedenim otvorima, balkonima i pripremom za daljnje završne radove."><img src="assets/projekt-stambeni-03.jpg" alt="Stambeni objekt s balkonima i ugrađenom vanjskom stolarijom" loading="lazy"><figcaption class="caption">Balkoni, otvori i stolarija</figcaption></figure>
+          <figure data-lightbox data-caption="Hidroizolacijska zaštita donjih zona objekta i priprema za nastavak završnih slojeva."><img src="assets/projekt-stambeni-04.jpg" alt="Hidroizolacijska zaštita donje zone stambenog objekta" loading="lazy"><figcaption class="caption">Hidroizolacijska zaštita</figcaption></figure>
+          <figure data-lightbox data-caption="Ugradnja vanjske stolarije i precizno formiranje građevinskih otvora prema izvedenom stanju."><img src="assets/projekt-stambeni-05.jpg" alt="Detalj vanjske stolarije na stambenom objektu" loading="lazy"><figcaption class="caption">Vanjska stolarija</figcaption></figure>
+          <figure data-lightbox data-caption="Pogled na objekt i gradilište – pregled izvedenih faza i organizacije radova."><img src="assets/projekt-stambeni-06.jpg" alt="Pogled na stambeni objekt i gradilište" loading="lazy"><figcaption class="caption">Pregled projekta i gradilišta</figcaption></figure>
+        </div>
+        <div style="margin-top:30px;text-align:center">
+          <a class="btn btn-primary" href="projekti.html">Pogledajte sve naše projekte →</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="partneri">
+      <div class="container">
+        <div class="section-head">
+          <div class="eyebrow">Stručni partneri</div>
+          <h2>Specijalizirane tvrtke s kojima izvodimo radove.</h2>
+          <p>Za pojedine faze projekta uključujemo provjerene specijalizirane izvođače i stručne partnere. Time možemo povezati građevinske, instalaterske, projektantske i nadzorne radove u organiziranu cjelinu.</p>
+        </div>
+        <div class="partners">
+          <article class="partner-card">
+            <div class="partner-kicker">Partner / elektro</div>
+            <h3>Valoto-Prom d.o.o.</h3>
+            <p>Elektroinstalacijski radovi, elektromaterijal te rješenja za elektro i telekomunikacijsku infrastrukturu.</p>
+            <a class="partner-link" href="https://www.valotoprom.hr" target="_blank" rel="noopener">Posjetite web stranicu →</a>
+          </article>
+          <article class="partner-card">
+            <div class="partner-kicker">Partner / HVAC</div>
+            <h3>HVAC Project d.o.o.</h3>
+            <p>Specijalizirana podrška za sustave grijanja, hlađenja i povezane strojarske instalacije.</p>
+            <span class="partner-link">Specijalizirani partner</span>
+          </article>
+          <article class="partner-card">
+            <div class="partner-kicker">Partner / projektiranje i nadzor</div>
+            <h3>Satira d.o.o.</h3>
+            <p>Projektiranje, građenje i stručni nadzor, uključujući konstrukcije, sanacije, adaptacije i koordinaciju.</p>
+            <a class="partner-link" href="https://www.satira.hr" target="_blank" rel="noopener">Posjetite web stranicu →</a>
+          </article>
+          <article class="partner-card">
+            <div class="partner-kicker">Partner / visokogradnja</div>
+            <h3>Konstruktor Graditeljstvo d.o.o.</h3>
+            <p>Visokogradnja, stambene kuće, urbane vile, proizvodne hale i rekonstrukcije.</p>
+            <a class="partner-link" href="https://konstruktor-graditeljstvo.hr" target="_blank" rel="noopener">Posjetite web stranicu →</a>
+          </article>
         </div>
       </div>
     </section>
@@ -319,7 +413,7 @@
             <div class="field"><label for="email">E-mail *</label><input id="email" type="email" name="email" required autocomplete="email"></div>
             <div class="field"><label for="telefon">Telefon</label><input id="telefon" name="telefon" autocomplete="tel"></div>
             <div class="field"><label for="lokacija">Lokacija objekta</label><input id="lokacija" name="lokacija"></div>
-            <div class="field full"><label for="vrsta">Vrsta radova</label><select id="vrsta" name="vrsta"><option value="">Odaberite...</option><option>Iskopi i priprema terena</option><option>Temelji i armiranobetonski radovi</option><option>Roh-bau gradnja</option><option>Krov</option><option>Hidroizolacija i izolacija</option><option>Vodovodne instalacije</option><option>Električne instalacije</option><option>Centralno i podno grijanje</option><option>Sustavi hlađenja</option><option>Rigips i suhomontažni sustavi</option><option>Završni građevinski radovi</option><option>Adaptacije i rekonstrukcije</option><option>Više faza / kompletna izvedba</option></select></div>
+            <div class="field full"><label for="vrsta">Vrsta radova</label><select id="vrsta" name="vrsta"><option value="">Odaberite...</option><option>Iskopi i priprema terena</option><option>Temelji i armiranobetonski radovi</option><option>Roh-bau gradnja</option><option>Krov</option><option>Hidroizolacija i izolacija</option><option>Vodovodne instalacije</option><option>Električne instalacije</option><option>Centralno i podno grijanje</option><option>Dizalice topline i podno grijanje</option><option>Sustavi hlađenja</option><option>Rigips i suhomontažni sustavi</option><option>Završni građevinski radovi</option><option>Adaptacije i rekonstrukcije</option><option>Više faza / kompletna izvedba</option></select></div>
             <div class="field full"><label for="poruka">Poruka *</label><textarea id="poruka" name="poruka" required placeholder="Opišite ukratko projekt, lokaciju i što vam je potrebno."></textarea></div>
             <div class="field full consent"><label><input type="checkbox" name="privacy" required> Pročitao/la sam <a href="politika-privatnosti.html">Politiku privatnosti</a> i razumijem kako se podaci iz ovog obrasca obrađuju radi odgovora na moj upit.</label></div>
             <div class="field full"><button class="btn btn-primary" type="submit">Pošalji upit</button><p class="form-note">Podaci se koriste za obradu vašeg upita i komunikaciju vezanu uz njega.</p></div>
@@ -333,14 +427,25 @@
     <div class="container">
       <div class="footer-grid">
         <div><img src="assets/logo.png" alt="Pro in mont jedan j.d.o.o." style="width:190px;margin-bottom:18px"><p>Izgradnja stambenih objekata – od iskopa do krova i unutarnjih građevinskih radova.</p></div>
-        <div><h3>Usluge</h3><p><a href="usluge/iskopi.html">Iskopi</a><br><a href="usluge/temelji.html">Temelji i AB radovi</a><br><a href="usluge/rohbau.html">Roh-bau</a><br><a href="usluge/krovovi.html">Krovovi</a><br><a href="usluge/hidroizolacija.html">Hidroizolacija</a><br><a href="usluge/vodovodne-instalacije.html">Vodovodne instalacije</a><br><a href="usluge/elektroinstalacije.html">Elektroinstalacije</a><br><a href="usluge/grijanje.html">Grijanje</a><br><a href="usluge/hladenje.html">Hlađenje</a><br><a href="usluge/suhomontaza.html">Suhomontaža</a><br><a href="usluge/zavrsni-radovi.html">Završni radovi</a><br><a href="usluge/adaptacije.html">Adaptacije</a></p></div>
+        <div><h3>Usluge</h3><p><a href="usluge/iskopi.html">Iskopi</a><br><a href="usluge/temelji.html">Temelji i AB radovi</a><br><a href="usluge/rohbau.html">Roh-bau</a><br><a href="usluge/krovovi.html">Krovovi</a><br><a href="usluge/hidroizolacija.html">Hidroizolacija</a><br><a href="usluge/vodovodne-instalacije.html">Vodovodne instalacije</a><br><a href="usluge/elektroinstalacije.html">Elektroinstalacije</a><br><a href="usluge/grijanje.html">Grijanje</a><br><a href="usluge/dizalice-topline.html">Dizalice topline i podno grijanje</a><br><a href="usluge/hladenje.html">Hlađenje</a><br><a href="usluge/suhomontaza.html">Suhomontaža</a><br><a href="usluge/zavrsni-radovi.html">Završni radovi</a><br><a href="usluge/adaptacije.html">Adaptacije</a></p></div>
         <div><h3>Informacije</h3><p><a href="#o-nama">O nama</a>
-        <a href="#faq">FAQ</a><br><a href="#projekti">Projekti</a><br><a href="#proces">Kako radimo</a><br><a href="#kontakt">Kontakt</a></p></div>
+        <a href="#faq">FAQ</a><br><a href="projekti.html">Naši projekti</a><br><a href="#partneri">Partneri</a><br><a href="#proces">Kako radimo</a><br><a href="#kontakt">Kontakt</a></p></div>
         <div><h3>Pravne informacije</h3><p><a href="politika-privatnosti.html">Politika privatnosti</a><br><a href="politika-kolacica.html">Politika kolačića</a><br><a href="pravne-napomene.html">Pravne napomene</a><br><a href="prigovori.html">Prigovori potrošača</a></p></div>
       </div>
-      <div class="footer-bottom"><span>© 2026 Pro in mont jedan j.d.o.o. Sva prava pridržana.</span><span>Ivana Keleka 2, 10360 Sesvete – Zagreb</span></div>
+      <div class="footer-bottom">
+        <span>© 2026 Pro in mont jedan j.d.o.o. Sva prava pridržana.</span>
+        <span>Ivana Keleka 2, 10360 Sesvete – Zagreb</span>
+        <span class="powered-by"><span>Powered by</span><a href="https://www.brandistiq.eu" target="_blank" rel="noopener" aria-label="BrandistiQ – web agencija"><img src="assets/brandistiq-powered-by.png" alt="BrandistiQ – Intelligent Web Agency" loading="lazy"></a></span>
+      </div>
     </div>
   </footer>
+
+
+  <div class="lightbox" id="projectLightbox" role="dialog" aria-modal="true" aria-label="Pregled fotografije projekta">
+    <button class="lightbox-close" type="button" aria-label="Zatvori">×</button>
+    <img src="" alt="">
+    <div class="lightbox-caption"></div>
+  </div>
 
   <script>
     const contactForm=document.querySelector('form[name="kontakt"]');
@@ -366,6 +471,26 @@
           alert('Došlo je do pogreške pri slanju upita. Molimo pokušajte ponovno ili nas kontaktirajte telefonom.');
         }
       });
+    }
+
+    const lightbox=document.getElementById('projectLightbox');
+    if(lightbox){
+      const lightboxImg=lightbox.querySelector('img');
+      const lightboxCaption=lightbox.querySelector('.lightbox-caption');
+      const closeLightbox=()=>{lightbox.classList.remove('open');document.body.style.overflow='';};
+      document.querySelectorAll('[data-lightbox]').forEach(item=>{
+        item.addEventListener('click',()=>{
+          const img=item.querySelector('img');
+          lightboxImg.src=img.src;
+          lightboxImg.alt=img.alt;
+          lightboxCaption.textContent=item.dataset.caption||'';
+          lightbox.classList.add('open');
+          document.body.style.overflow='hidden';
+        });
+      });
+      lightbox.querySelector('.lightbox-close').addEventListener('click',closeLightbox);
+      lightbox.addEventListener('click',e=>{if(e.target===lightbox) closeLightbox();});
+      document.addEventListener('keydown',e=>{if(e.key==='Escape') closeLightbox();});
     }
 
   </script>
